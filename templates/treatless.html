@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Treatless List
+{% endblock %}
+
+{% block body %}
+<p>These users currently have 0 or 1 gift in the collection:</p>
+<ul>
+{% for user in treatless %}
+    <li><a href="https://archiveofourown.org/users/{{ user }}/gifts">user</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+

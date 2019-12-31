@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Choose Collection
+{% endblock %}
+
+{% block body %}
+<p>To generate a list of treatless recipients, please enter in the collection name exactly as it appears in the collection URL: https://archiveofourown.org/collections/NAME</p>
+<p>Example: yuletide2019</p>
+<p>The collection must be closed to new sign-ups.</p>
+
+<form action="/search" method="post">
+
+    <div class="form-group">
+        <input autofocus class="form-control" name="challenge" autocomplete="off" placeholder="collection">
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary">Search</button>
+    </div>
+
+</form>
+{% endblock %}
